@@ -1,0 +1,96 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;  
+}
+
+img{
+    border-radius: 50%;
+    width: 120px;
+}
+
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 80px;
+    background-image: url(./images/avangers-two.jpg);
+}
+
+
+.card{
+    width: 150px;
+    height: 150px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform .5s ;
+    
+}
+
+.card-back, .card-front{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: 10px 10px 10px rgba(0,0,0.45);
+    backface-visibility: hidden;
+    
+}
+
+.flip{
+    transform: rotateY(180deg );
+    
+}
+
+.card-front{
+    background-color: #593B67;
+    transform: rotateY(180deg);
+    
+}
+
+.card-back{
+    color: #101c2c;
+    background-color: #A13FBF ;
+    font-size: 30px;
+    
+}
+
+#gameOver{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    font-size: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    right: 0;
+}
+
+#restart{
+    padding: 20px;
+    font-size: 20px;
+    background-color: #5F0B79;
+    border: none;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+#gameBoard{
+    max-width: 700px;
+    display: grid;
+    grid-template: 1fr 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    
+
+}
